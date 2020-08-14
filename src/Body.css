@@ -1,0 +1,10 @@
+.Body-container{
+    display: flex;
+    height: auto;
+    margin: 16px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid blue;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

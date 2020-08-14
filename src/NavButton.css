@@ -1,0 +1,11 @@
+.Nav-button{
+    margin: 16px;
+    /* padding: 4px; */
+    border-radius: 5px;
+    border: 1px solid yellow;
+}
+
+.Nav-button:hover {
+    background-color: black;
+    color: white;
+}
