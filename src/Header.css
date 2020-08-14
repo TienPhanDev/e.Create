@@ -1,6 +1,23 @@
 .Header-container {
     display: flex;
+    flex-flow: row nowrap;
     height: 50px;
+    margin: 16px;
     border-radius: 5px;
     border: 1px solid red;
+    padding: 1;
+    justify-content: space-between;
+}
+
+.Header-container p {
+    justify-self: flex-start;
+    margin-left: 16px;
+}
+
+.Header-container div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-self: flex-end;
+    justify-content: flex-end;
+
 }

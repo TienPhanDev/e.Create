@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
 import Event from '../components/Event'
+import '../Body.css'
 
 
-export default class Body extends Component {
-    render() {
-        return (
-            <div className="body-container">
-                <Event />
-            </div>
-        )
-    }
+export default function Body() {
+    
+    return (
+        <div className="Body-container">
+            <Event />
+            <Event />
+            <Event />
+            <Event />
+            <Event />
+            <Event />
+            <Event />
+        </div>
+    )
 }
+
