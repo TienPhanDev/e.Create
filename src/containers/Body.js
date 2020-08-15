@@ -9,9 +9,17 @@ export default class Body extends Component {
         super()
 
         this.state = {
-            events: []
+            category: [],
+            events: [],
+            displayEvents: [],
+            filter: ''
         }
     }
+
+
+
+
+
     render(){
     return (
         <div className="Body-container">

@@ -17,9 +17,9 @@ export default function Event() {
 
     },[])
 
-    const showEvents = () => {
+    let showEvents = () => {
     return events.map(event => {
-        <EventDetail 
+        return <EventDetail 
         key = {event.id}
         event = {event}
         />
