@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Event from '../components/Event'
+import Category from '../components/Category'
 import '../Body.css'
 
 
@@ -7,13 +7,13 @@ export default function Body() {
     
     return (
         <div className="Body-container">
-            <Event />
-            <Event />
-            <Event />
-            <Event />
-            <Event />
-            <Event />
-            <Event />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
         </div>
     )
 }
