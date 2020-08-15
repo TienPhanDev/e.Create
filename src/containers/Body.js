@@ -9,27 +9,37 @@ export default class Body extends Component {
         super()
 
         this.state = {
-            category: [],
             events: [],
             displayEvents: [],
-            filter: ''
         }
     }
 
+    componentDidMount(){
+        this.fetchEvents()
+    }
 
+    fetchEvents = () => {
+        fetch(url)
+        .then(res => res.json())
+        .then(eventsData => this.setState({
+            events: eventsData,
+            displayEvents: eventsData
+        }))
+    }
+
+    filterEvents = (event) => {
+        console.log(event)
+        // this.setState({
+        //     displayEvents: newCategory
+        // })
+    }
 
 
 
     render(){
     return (
         <div className="Body-container">
-            <Category />
-            <Category />
-            <Category />
-            <Category />
-            <Category />
-            <Category />
-            <Category />
+            <Category displayEvents = { this.state.displayEvents } filterEvents = {this.filterEvents}/>
         </div>
         )
     }

@@ -13,8 +13,8 @@ export const EventDetail = (props) => {
     state,
   } = props.event;
 
-     return (
-      <div className="event-card" onClick={() => console.log("You clicked the eventDIV, this event ID is:", {id})}>
+    return (
+      <div className="event-card" onClick={() => props.filterEvents()}>
         <img src={"https://www.alpha.network/sites/default/files/2019-07/alpha-spring-cocktail-party-event-thumbnail-new_0.jpg"} alt=""></img>
         <h2>Event title: {title}</h2>
         <h4>Event price: ${price}</h4>
