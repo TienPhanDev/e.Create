@@ -1,12 +1,13 @@
 .Header-container {
     display: flex;
     flex-flow: row nowrap;
-    height: 50px;
+    height: 52px;
     margin: 16px;
     border-radius: 5px;
     border: 1px solid red;
     padding: 1;
     justify-content: space-between;
+    background-color: black;
 }
 
 .Header-container p {
@@ -20,4 +21,18 @@
     justify-self: flex-end;
     justify-content: flex-end;
 
+}
+
+.title {
+    font-size: 20px;
+    color: white;
+    margin: 12px;
+} 
+
+.Header-container img {
+ height: 100px;
+ width: 100px;
+ position: relative;
+ top: -25px;
+ ;
 }

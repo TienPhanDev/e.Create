@@ -2,15 +2,18 @@ import React, { Component } from 'react'
 import NavButton from '../components/NavButton'
 import '../Header.css'
 
+import logo from './logofinal.png'
+
 export default function Header() {
     
     return (
         <div className="Header-container">
-            <p>App Name</p>
+            <img src={logo}></img>
             <div>
-                <NavButton />
-                <NavButton />
-                <NavButton />
+            
+                <NavButton name={"Sign up"}/>
+                <NavButton name={"Login"}/>
+                <NavButton name={"Browse"}/>
             </div>
         </div>
     )
