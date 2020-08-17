@@ -39,7 +39,7 @@ export default class Body extends Component {
     render(){
     return (
         <div className="Body-container">
-            <Category displayEvents = { this.state.displayEvents } filterEvents = {this.filterEvents}/>
+            {/* <Category displayEvents = { this.state.displayEvents } filterEvents = {this.filterEvents}/> */}
         </div>
         )
     }
