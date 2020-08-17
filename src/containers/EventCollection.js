@@ -10,3 +10,19 @@ export default class EventCollection extends Component {
         )
     }
 }
+
+let showEvents = () => {
+    return props.displayEvents.map(event => {
+        return <EventDetail 
+        key = {event.id}
+        event = {event}
+        filterEvents = {props.filterEvents}
+        />
+    })
+}
+
+return (
+    <div className="Category">
+        {showEvents()}
+    </div>
+)
