@@ -47,12 +47,14 @@ export default class Body extends Component {
           <div class="overlay"></div>
         </div>
 
+
         <div id="business" class="section">
           <div class="content">
             <h1>Business</h1>
           </div>
           <div class="overlay"></div>
         </div>
+
 
         <div id="art" class="section">
           <div class="content">
