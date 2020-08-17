@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import "./EventCard.scss";
+import useModal from "../EventModal/useModal"
+import Modal from "../EventModal/Modal"
 
-export default class EventCard extends Component {
-  render() {
+const EventCard = () => {
+  
+    const {isShowing, toggle} = useModal();
     return (
       <div class="container">
 
@@ -13,8 +16,10 @@ export default class EventCard extends Component {
           <div class="pic"></div>
           <div class="social">
           </div>
-          <button></button>
+          <button onClick={toggle} > CLick here</button>
+          <Modal isShowing={isShowing} hide={toggle}/>
         </div>
+
 
         <div class="card card2">
           <h2>Vauxhall</h2>
@@ -47,5 +52,7 @@ export default class EventCard extends Component {
         </div>
       </div>
     );
-  }
+ 
 }
+
+export default EventCard

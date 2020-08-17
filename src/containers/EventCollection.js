@@ -11,7 +11,7 @@ export default class EventCollection extends Component {
             <div className="trigger">
                 {/* {this.showEvents()} */}
                 {this.props.displayEvents.map(event =>  <EventCard key = {event.id} event = {event} filterEvents={this.props.filterEvents}/>)}
-                {this.props.displayEvents.map(event =>  <EventModal key = {event.id} event = {event} filterEvents={this.props.filterEvents}/>)}
+              
             </div>
         )
     }
