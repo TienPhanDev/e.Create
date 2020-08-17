@@ -38,7 +38,8 @@ export default class Body extends Component {
 
     render(){
     return (
-        <div className="Body-container">
+        <div>
+            <div className="Body-container">
             <div className="category-rows">
                 <div className="category-columns">
                     <div>1</div>
@@ -59,26 +60,29 @@ export default class Body extends Component {
                     <div>2</div>
                 </div>  
             </div>
+        </div>
 
+        <div>
             <div className="category-rows">
-                <div className="category-columns">
-                    <div>1</div>
-                    <div>2</div>
-                </div>  
-            </div>
+                    <div className="category-columns">
+                        <div>1</div>
+                        <div>2</div>
+                    </div>  
+                </div>
 
-            <div className="category-rows">
-                <div className="category-columns">
-                    <div>3</div>
-                    <div>4</div>
-                </div>  
-            </div>
-            
-            <div className="category-rows">
-                <div className="category-columns">
-                    <div>1</div>
-                    <div>2</div>
-                </div>  
+                <div className="category-rows">
+                    <div className="category-columns">
+                        <div>3</div>
+                        <div>4</div>
+                    </div>  
+                </div>
+                
+                <div className="category-rows">
+                    <div className="category-columns">
+                        <div>1</div>
+                        <div>2</div>
+                    </div>  
+                </div>
             </div>
         </div>
         )
