@@ -1,5 +1,4 @@
 import React from "react";
-import "./EventDetail.css";
 import "../EventUi.css"
 
 export const EventDetail = (props) => {
