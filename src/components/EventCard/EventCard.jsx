@@ -9,14 +9,14 @@ const EventCard = () => {
     return (
       <div class="container">
 
-        <div class="card">
+        <div onClick={toggle} class="card">
           <h2>North</h2>
           <i class="fas fa-arrow-right"></i>
           <p>a lonely trip.</p>
           <div class="pic"></div>
           <div class="social">
           </div>
-          <button onClick={toggle} > CLick here</button>
+          <button  > CLick here</button>
           <Modal isShowing={isShowing} hide={toggle}/>
         </div>
 
