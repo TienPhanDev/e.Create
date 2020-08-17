@@ -13,15 +13,9 @@ export default class Footer extends Component {
                         ©2020 Event Application, Made by Danny/Diego/Tien
                     </p>
                 </div>
-                <div> 
-                    <button>
-                        <link href=''/>
-                        Terms & Conditions
-                    </button>
-                    <button>
-                        <link href=''/>
-                        Flatiron School
-                    </button>
+                <div className="button-div">
+                    <a href="/" className="button-div">Terms & Conditions</a>
+                    <a href="/" className="button-div">Flatiron School</a>
                 </div>                   
             </section>
         )

@@ -2,6 +2,14 @@
     background-color: black;
     color:white;
     display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
     justify-content: space-between;
     align-items: baseline;
+}
+
+.button-div {
+    background-color: black;
+    color:white;
+    margin: 3px;
 }

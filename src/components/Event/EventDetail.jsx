@@ -6,12 +6,9 @@ export const EventDetail = (props) => {
   const {
     id,
     title,
-    description,
     price,
     date,
-    tickets_remaining,
-    city,
-    state,
+    location
   } = props.event;
 
     return (
@@ -20,11 +17,10 @@ export const EventDetail = (props) => {
           <h2>Event title: {title}</h2>
         <div className="card-info">
           <h4>Event price: ${price}</h4>
-          <h4>Tickets left for sale:{tickets_remaining}</h4>
-          <h4>Description: {description}</h4>
+          <h4>Tickets left for sale:" "</h4>
+          <h4>Description: " "</h4>
           <div>Date: {date}</div>
-          <div>City: {city}</div>
-          <div>State: {state}</div>
+          <div>Location: {location}</div>
           <button onClick={() => console.log("You clicked the buy a ticket button, this event ID is:", {id})}>CLICK HERE TO GET A TICKET!</button>
         </div>
       </div>
