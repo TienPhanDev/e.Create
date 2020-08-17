@@ -3,11 +3,14 @@ import '../Body.css'
 import EventCollection from './EventCollection'
 
 const url = "http://localhost:3000/api/event_categories";
+const exampleEvents = [{title: "hello", price: "$45", location: "Bmore"},
+{title: "hello again", price: "$25", location: "DC"},
+{title: "goodbye", price: "$5", location: "Maryland"}];
 
-export default class Body extends Component {
+export default class BodyExample extends Component {
     state = {
         category: null,
-        displayEvents: [],
+        displayEvents: [exampleEvents],
         allEvents: []
     }
 

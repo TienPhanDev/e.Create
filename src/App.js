@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './containers/Header'
+import Header from './containers/Header';
 import Body from './containers/Body';
+import EventCollection from "./containers/EventCollection";
 import  Login from './components/login/Login';
 import { Register } from './components/login/Register';
 
@@ -38,7 +39,8 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <br></br>
-        <Body/>
+        {/* <Body/> */}
+        <BodyExample/>
         <Footer/>
       </div>
     );
