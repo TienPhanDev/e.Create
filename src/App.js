@@ -26,7 +26,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <br></br>
-        <BodyExample/>
+        <Body/>
         <Footer/>
       </div>
     );
