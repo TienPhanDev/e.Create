@@ -6,7 +6,6 @@ import  Login from './components/login/Login';
 import { Register } from './components/login/Register';
 import Footer from "./components/Footer/Footer"
 
-const usersUrl = 'http://localhost:3000/api/v1/users';
 const eventsUrl = 'http://localhost:3000/api/v1/events';
 
 class App extends React.Component { 
