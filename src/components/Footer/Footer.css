@@ -1,5 +1,6 @@
 .footer {
     background-color: black;
+    font-size: 18px;
     color:white;
     display: flex;
     padding-left: 10px;
@@ -11,5 +12,5 @@
 .button-div {
     background-color: black;
     color:white;
-padding:3px;
+    padding: 8px;
 }

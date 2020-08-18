@@ -10,7 +10,7 @@ export default class Footer extends Component {
             <section className='footer'>
                 <div>
                     <p>
-                        ©2020 Event Application, Made by Danny/Diego/Tien
+                        ©2020 E.Create courtesy: Danny/Diego/Tien
                     </p>
                 </div>
                 <div className="button-div">

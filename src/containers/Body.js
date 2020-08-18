@@ -58,9 +58,9 @@ export default class Body extends Component {
         </div>
 
 
-        <div id="art" class="section">
+        <div id="social" class="section">
           <div class="content">
-            <h1>Art Shows</h1>
+            <h1>Social</h1>
           </div>
           <div class="overlay"></div>
         </div>
