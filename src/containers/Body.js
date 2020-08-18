@@ -1,40 +1,42 @@
 import React, { Component } from "react";
-import Category from "../components/Category";
-import "../Body.css";
+import "./Body.css";
+import EventCollection from './EventCollection';
 
-const url = "http://localhost:3000/api/events";
+const eventsUrl = "http://localhost:3000/api/events";
+const categoryUrl = "http://localhost:3000/api/event_categories";
+const exampleEvents = [{title: "hello", price: "$45", location: "Bmore"},
+{title: "hello again", price: "$25", location: "DC"},
+{title: "goodbye", price: "$5", location: "Maryland"}];
 
 export default class Body extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      events: [],
-      displayEvents: [],
-    };
+  state = {
+    category: null,
+    displayEvents: [exampleEvents],
+    allEvents: []
   }
 
-  componentDidMount() {
-    this.fetchEvents();
+  componentDidMount(){
+    this.fetchCategories()
   }
 
-  fetchEvents = () => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((eventsData) =>
-        this.setState({
-          events: eventsData,
-          displayEvents: eventsData,
-        })
-      );
-  };
+  fetchCategories = () => {
+    fetch(categoryUrl)
+    .then(res => res.json())
+    .then(eventsData => this.setState({
+        displayEvents: eventsData,
+        allEvents: eventsData
+    }))
+  }
 
-  filterEvents = (event) => {
-    console.log(event);
-    // this.setState({
-    //     displayEvents: newCategory
-    // })
-  };
+  filterEvents = (e) => {
+    console.log(e.categorie.name)
+    let newCategory = e.categorie.name;
+    let filteredEvents = this.state.allEvents.filter(event => event.categorie.name === newCategory);
+    this.setState({
+        category: newCategory,
+        displayEvents: filteredEvents
+    })
+  }
 
   render() {
     return (
@@ -83,6 +85,8 @@ export default class Body extends Component {
           </div>
           <div class="overlay"></div>
         </div>
+
+        {/* <EventCollection filterEvents={this.filterEvents} displayEvents = {this.state.displayEvents} />  */}
 
       </div>
     );

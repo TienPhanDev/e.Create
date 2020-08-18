@@ -1,6 +1,6 @@
 import React from 'react';
 import NavButton from './NavButton';
-import '../Header.css';
+import './Header.css';
 import logo from './logofinal.png';
 
 export default function Header() {
