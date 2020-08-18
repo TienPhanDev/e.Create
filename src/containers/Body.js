@@ -53,7 +53,6 @@ export default class Body extends Component {
   render() {
     return (
       <div class="container">
-        <EventCard />
         {/* <UserForm/> */}
         {/* <EventForm addNewEvent={this.addNewEvent}/> */}
         <div id="music" class="section">

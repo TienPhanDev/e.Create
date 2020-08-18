@@ -2,6 +2,7 @@ import React from 'react';
 import NavButton from './NavButton';
 import './Header.css';
 import logo from './logofinal.png';
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
     
@@ -9,9 +10,9 @@ export default function Header() {
         <div className="Header-container">
             <img src={logo} alt=''></img>
             <div>
-                <NavButton name={"Sign up"}/>
-                <NavButton name={"Login"}/>
-                <NavButton name={"Browse"}/>
+               <NavLink to="/login" > <NavButton name={"Login"} />   </NavLink> 
+               <NavLink to="/event_form"><NavButton name={"Create Event"}/></NavLink>
+                <NavLink to="/events" > <NavButton name={"Browse"}/> </NavLink>   
             </div>
         </div>
     )
