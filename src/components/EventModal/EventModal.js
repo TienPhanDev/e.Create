@@ -1,5 +1,5 @@
-import React from 'react'
-import EventUi from '../EventUi.css'
+import React from 'react';
+import '../EventModal.css';
 
 const EventModal = (props) =>{
     const {
