@@ -29,10 +29,21 @@ export default class EventForm extends Component {
         body: JSON.stringify(this.state)
         })
         .then(resp => resp.json())
-        .then(response => console.log(response))
+        .then((response) => {
+          console.log(response) //this.addNewEvent(response.data)
+          this.resetForm()
+        })
         .catch(error => console.log(error))
         e.preventDefault();
         //make & invoke clearEventForm function
+    }
+
+    resetForm = () => {
+      this.setState({
+        title: '',
+        date: '',
+        city: ''
+      })
     }
 
     render () {

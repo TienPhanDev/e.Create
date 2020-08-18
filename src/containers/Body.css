@@ -37,27 +37,27 @@
     background-color: rgba(0, 0, 0, 0.95);
   }
   
-  #music {
+  #music-div {
     background-image: url("../images/music-fans-at-a-venue.jpg");
   }
   
-  #business {
+  #business-div {
     background-image: url("../images/hands-on-desk-at-meeting.jpg");
   }
   
-  #social {
+  #social-div {
     background-image: url("../images/happy-new-year-sparklers.jpg");
   }
 
-  #networking {
+  #networking-div {
     background-image: url("../images/row-of-young-adults-at-work.jpg");
   }
   
-  #sports {
+  #sports-div {
     background-image: url("../images/Fan-With-Sign-At-Soccer-Game.jpg");
   }
   
-  #education {
+  #education-div {
     background-image: url("../images/crowd-participating-at-event.jpg");
   }
 

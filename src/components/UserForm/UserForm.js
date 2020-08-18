@@ -29,9 +29,11 @@ export default class UserForm extends Component {
 
     handleSubmit = (e) => {
         if(this.state.active){
-            fetch(usersUrl)
+            fetch(`${usersUrl}/find_user/${this.state.username}`)
             .then(resp => resp.json())
-            .then(console.log())
+            .then(user => console.log(user))
+            .catch(error => {console.log(error)})
+            e.preventDefault()
         } else {
         fetch(`${usersUrl}`, {
         method: 'POST',
@@ -42,11 +44,27 @@ export default class UserForm extends Component {
         body: JSON.stringify(this.state)
         })
         .then(resp => resp.json())
-        .then(response => console.log(response))
+        .then(user => console.log(user))
         .catch(error => {console.log(error)})
         e.preventDefault()
+        }
     }
-    }
+
+    // LogUserIn = (user) => {
+    //     clearContainer();
+    //     userId = user.id;
+    //     userName = user.name;
+    //     userGames = user['owned_games'];
+    //     userWishlists = user['wishlist_games'];
+    //     userReviews = user['reviews'];
+    
+    //     const h1 = document.createElement('h1');
+    //     h1.classList.add('title');
+    //     h1.classList.add('is-1');
+    //     h1.innerText = `Welcome, ${user.name}!`;
+    
+    //     container.append(h1);
+    // }
 
     render () {
         return (
