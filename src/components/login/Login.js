@@ -1,38 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
 import loginImage from './loginimage.jpg'
-import "./style.scss";
+import "./login.css";
 
-export default class Login extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-  
-    render() {
-      return (
-        <div className="base-container" ref={this.props.containerRef}>
-          <div className="header">Login</div>
-          <div className="content">
-            <div className="image">
-              <img src={loginImage} />
-            </div>
-            <div className="form">
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" placeholder="username" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" placeholder="password" />
-              </div>
-            </div>
-          </div>
-          <div className="footer">
-            <button type="button" className="btn">
-              Login
-            </button>
-          </div>
+
+export default function Login() {
+    return (
+        <div>
+            <div className="wrapper fadeInDown">
+  <div id="formContent">
+    
+    <h2 className="active"> Sign In </h2>
+    <h2 className="inactive underlineHover">Sign Up </h2>
+
+    
+    <div className="fadeIn first">
+      <img src={loginImage} id="icon" alt="User Icon" />
+    </div>
+
+    
+    <form>
+      <input type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
+      <input type="text" id="password" className="fadeIn third" name="login" placeholder="password"/>
+      <input type="submit" className="fadeIn fourth" value="Log In"/>
+    </form>
+
+    
+    <div id="formFooter">
+      <a className="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+            
         </div>
-      );
-    }
-  }
-
+    )
+}
