@@ -3,7 +3,7 @@ import "./EventCard.scss";
 import useModal from "../EventModal/useModal"
 import Modal from "../EventModal/Modal"
 
-const EventCard = () => {
+const EventCard = (props) => {
   
     const {isShowing, toggle} = useModal();
     return (
@@ -17,7 +17,7 @@ const EventCard = () => {
           <div class="social">
           </div>
           <button  > CLick here</button>
-          <Modal isShowing={isShowing} hide={toggle}/>
+          <Modal isShowing={isShowing} event={props.event} hide={toggle}/>
         </div>
 
         <div class="card card2">
@@ -31,7 +31,6 @@ const EventCard = () => {
         </div>
       </div>
     );
- 
 }
 
 export default EventCard
