@@ -3,6 +3,9 @@ import "./Body.css";
 import EventCollection from './EventCollection';
 import UserForm from '../components/UserForm/UserForm';
 import EventForm from '../components/EventForm/EventForm';
+import EventCard from "../components/EventCard/EventCard";
+import EventModal from "../components/EventModal/EventModal";
+
 
 const eventsUrl = "http://localhost:3001/api/events";
 const categoryUrl = "http://localhost:3000/api/event_categories";

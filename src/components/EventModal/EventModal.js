@@ -12,6 +12,7 @@ const EventModal = (props) =>{
     return(
 
         <div className="Modal">
+            {console.log(props)}
             <div className="title-and-picture">
                 <h2>Title: { title }</h2>
                 <img src={"https://www.alpha.network/sites/default/files/2019-07/alpha-spring-cocktail-party-event-thumbnail-new_0.jpg"} alt=""></img>
