@@ -51,7 +51,7 @@ export default class Body extends Component {
     return (
       <div class="container">
 
-        <UserForm/>
+        {/* <UserForm/> */}
         {/* <EventForm addNewEvent={this.addNewEvent}/> */}
         <div id="music" class="section">
           <div class="content">

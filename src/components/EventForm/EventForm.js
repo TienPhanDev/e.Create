@@ -16,6 +16,7 @@ export default class EventForm extends Component {
         newState[name] = event.target.value
         this.setState(newState)
         event.preventDefault()
+        
     }
 
     handleSubmit = (e) => {
@@ -32,6 +33,8 @@ export default class EventForm extends Component {
         .then(response => console.log(response))
         .catch(error => console.log(error))
         e.preventDefault();
+        
+        
         //make & invoke clearEventForm function
     }
 
