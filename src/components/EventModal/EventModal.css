@@ -13,6 +13,8 @@
 .title-and-picture h2{
     font-size: x-large;
     font-weight: bolder;
+    color: black;
+    text-shadow: 2px 2px grey;
 }
 
 .modal-overlay {
@@ -62,7 +64,26 @@
     cursor: pointer;
     border: none;
 }
+
+.modal-close-button:hover {
+    background-color: red;
+    opacity: 1;
+}
+
+.modal img{
+    width: 450px;
+    border-radius: 8px;
+}
+
+.modal ul{
+    list-style: none;
+    padding: 0;
+}
   
+.ModalInfo{
+    text-align: left;
+}
+
 button {
     font-size: .9rem;
     font-weight: 700;
@@ -70,9 +91,28 @@ button {
     border-radius: 3px;
     padding: .3rem 1rem;
     margin-left: .5rem;
+    display: flex;
+
 }
+
   
 .button-default {
     background: #247BA0;
     color: #fff;
+}
+
+.Buy-Button{
+    display: flex;
+    justify-content: center;
+}
+
+.Buy-Button button{
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+.Buy-Button button:hover{
+    background-color: green;
+    top: -5px;
 }
