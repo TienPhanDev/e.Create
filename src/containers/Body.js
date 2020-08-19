@@ -3,7 +3,7 @@ import "./Body.css";
 import EventCollection from './EventCollection';
 import AllCategories from "./AllCategories.jsx";
 
-const eventsUrl = "http://localhost:3000/api/events";
+const eventsUrl = "http://localhost:3001/api/events";
 
 export default class Body extends Component {
     state = {
@@ -20,6 +20,12 @@ export default class Body extends Component {
         displayEvents: eventsData,
         allEvents: eventsData
       }))
+    }
+
+    resetDisplay = () => {
+      this.setState({
+        category: null
+      })
     }
 
     filterEvents = (e) => {
@@ -56,20 +62,30 @@ export default class Body extends Component {
       }
     }
 
-    getTicket = (e) => {
-      console.log(e)
+    getTicket = (event) => {
+      const options = {
+        'method': 'POST',
+        'headers' : {
+            'accept': 'application/json',
+            'content-type': 'application/json'
+        },
+        'body': JSON.stringify({
+            user_id: this.state.currentUser,
+            event_id: event
+        })
+    }
+    fetch("http://localhost:3000/api/tickets", options)
+    .then(response => response.json())
+    .then(ticket => console.log(ticket))
+    .catch(error => alert(error))
     }
 
-    addNewEvent = (event) => {
-      const events = [event, ...this.state.allEvents];
-      this.setState({allEvents: events});
-    }
-    
     renderHomepage = () => this.state.category ? 
     <EventCollection 
     getTicket={this.getTicket}
-    displayEvents={this.state.displayEvents} /> :
-     <AllCategories filterEvents={this.filterEvents}/>
+    displayEvents={this.state.displayEvents}
+    resetDisplay={this.resetDisplay} /> :
+    <AllCategories filterEvents={this.filterEvents}/>
 
     render() {
       return (

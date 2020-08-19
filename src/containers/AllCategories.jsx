@@ -4,7 +4,7 @@ import "./Body.css";
 
 const AllCategories = (props) => {
     return (
-        <div class="container">
+        <div className="container">
 
         <div id="music-div" class="section" onClick={(e) => props.filterEvents(e)}>
           <div class="content">

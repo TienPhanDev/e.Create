@@ -6,10 +6,11 @@ const usersUrl = 'http://localhost:3000/api/users';
 export default class UserForm extends Component {
     constructor() {
         super()
+    
         this.state = {
-          username: '',
-          password: '',
-          active: false
+            username: '',
+            password: '',
+            active: false  
         }
     }
 
@@ -28,6 +29,7 @@ export default class UserForm extends Component {
     }
 
     handleSubmit = (e) => {
+        e.preventDefault()
         if(this.state.active){
         fetch(`${usersUrl}/login`, {
             method: 'POST',
@@ -44,7 +46,6 @@ export default class UserForm extends Component {
             this.resetUserForm()
         })
         .catch(error => {console.log(error)})
-        e.preventDefault()
         } else {
         fetch(`${usersUrl}`, {
         method: 'POST',
@@ -61,7 +62,6 @@ export default class UserForm extends Component {
             this.resetUserForm()
         })
         .catch(error => console.log(error))
-        e.preventDefault()
         }
     }
 
