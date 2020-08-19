@@ -1,113 +1,81 @@
 import React, { Component } from "react";
 import "./Body.css";
 import EventCollection from './EventCollection';
-import UserForm from '../components/UserForm/UserForm';
-import EventForm from '../components/EventForm/EventForm';
-import EventCard from "../components/EventCard/EventCard";
-import EventModal from "../components/EventModal/EventModal";
+import AllCategories from "./AllCategories.jsx";
 
-
-const eventsUrl = "http://localhost:3001/api/events";
-const categoryUrl = "http://localhost:3000/api/event_categories";
-const exampleEvents = [{title: "hello", date: "2020-04-15", location: "Bmore", category: 'social'},
-{title: "hello again", date: "2020-04-15", location: "DC", category: 'sports'},
-{title: "goodbye", date: "2020-04-15", location: "Maryland", category: 'music'}];
+const eventsUrl = "http://localhost:3000/api/events";
 
 export default class Body extends Component {
-  state = {
-    category: undefined,
-    displayEvents: [],
-    allEvents: []
-  }
+    state = {
+      category: null,
+      displayEvents: [],
+      allEvents: [],
+      currentUser: {}
+    }
 
-   componentDidMount(){
-     this.fetchCategories()
-  }
-
-  fetchCategories = () => {
-    fetch(eventsUrl)
-    .then(res => res.json())
-    .then(eventsData => this.setState({
+    componentDidMount(){
+      fetch(eventsUrl)
+      .then(res => res.json())
+      .then(eventsData => this.setState({
         displayEvents: eventsData,
         allEvents: eventsData
-    }))
-  }
+      }))
+    }
 
-  filterEvents = (e) => {
-    console.log(e.target.id)
-    this.setState({
-         category: e.target.id
-    }, this.showFilterEvents())
-  }
+    filterEvents = (e) => {
+      if(e.target.id === 'music'){
+        let filteredEvents = this.state.allEvents.filter(event => event.category === 'music');
+        this.setState({
+          category: "music",
+          displayEvents: filteredEvents})
+      } else if(e.target.id === 'sports'){
+        let filteredEvents = this.state.allEvents.filter(event => event.category === 'sports');
+        this.setState({
+          category: "sports",
+          displayEvents: filteredEvents})
+      } else if(e.target.id === 'social'){
+        let filteredEvents = this.state.allEvents.filter(event => event.category === 'social');
+        this.setState({
+          category: "social",
+          displayEvents: filteredEvents})
+      } else if(e.target.id === 'networking'){
+        let filteredEvents = this.state.allEvents.filter(event => event.category === 'networking');
+        this.setState({
+          category: "networking",
+          displayEvents: filteredEvents})
+      } else if(e.target.id === 'educational'){
+        let filteredEvents = this.state.allEvents.filter(event => event.category === 'educational');
+        this.setState({
+          category: "educational",
+          displayEvents: filteredEvents})
+      } else if(e.target.id === 'business'){
+        let filteredEvents = this.state.allEvents.filter(event => event.category === 'business');
+        this.setState({
+          category: "business",
+          displayEvents: filteredEvents})
+      }
+    }
 
-  showFilterEvents = (e) => {
-  let filteredEvents = this.state.allEvents.filter(event => event.category === this.state.category);
-  console.log(filteredEvents);
-  this.setState({
-  displayEvents: filteredEvents
-     })
-  }
+    getTicket = (e) => {
+      console.log(e)
+    }
 
-  addNewEvent = (event) => {
-    const events = [event, ...this.state.allEvents].sort(function(a, b){
-      return new Date(a.start_datetime) - new Date(b.start_datetime)
-    })
-    this.setState({allEvents: events})
-  }
+    addNewEvent = (event) => {
+      const events = [event, ...this.state.allEvents];
+      this.setState({allEvents: events});
+    }
+    
+    renderHomepage = () => this.state.category ? 
+    <EventCollection 
+    getTicket={this.getTicket}
+    displayEvents={this.state.displayEvents} /> :
+     <AllCategories filterEvents={this.filterEvents}/>
 
-  render() {
-    return (
-      <div class="container">
-
-        {/* <UserForm/>
-        <EventForm addNewEvent={this.addNewEvent}/> */}
-        <div id="music-div" class="section" onClick={(e) => this.filterEvents(e)}>
-          <div class="content">
-            <h1>Music</h1>
-          </div>
-          <div class="overlay" id="music"></div>
-        </div>
-
-
-        <div id="business-div" class="section" onClick={(e) => this.filterEvents(e)}>
-          <div class="content">
-            <h1>Business</h1>
-          </div>
-          <div class="overlay" id="business"></div>
-        </div>
-
-
-        <div id="social-div" class="section" onClick={(e) => this.filterEvents(e)}>
-          <div class="content">
-            <h1>Social</h1>
-          </div>
-          <div class="overlay" id="social"></div>
-        </div>
-
-        <div id="networking-div" class="section" onClick={this.filterEvents}>
-          <div class="content">
-            <h1>Networking</h1>
-          </div>
-          <div class="overlay" id="networking"></div>
-        </div>
-
-        <div id="sports-div" class="section" onClick={this.filterEvents}>
-          <div class="content">
-            <h1>Sports</h1>
-          </div>
-          <div class="overlay" id="sports"></div>
-        </div>
-
-        <div id="education-div" class="section" onClick={this.filterEvents}>
-          <div class="content">
-            <h1>Education</h1>
-          </div>
-          <div class="overlay" id="education"></div>
-        </div>
-
-        {/* <EventCollection filterEvents={this.filterEvents} displayEvents = {this.state.displayEvents} /> */}
-
-      </div>
+    render() {
+      return (
+        <>
+        {this.renderHomepage()}
+        </>
     );
   }
 }

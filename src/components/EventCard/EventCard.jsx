@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import "./EventCard.scss";
-import useModal from "../EventModal/useModal"
-import Modal from "../EventModal/Modal"
+import useModal from "../EventModal/useModal";
+import Modal from "../EventModal/Modal";
 
 const EventCard = (props) => {
   
