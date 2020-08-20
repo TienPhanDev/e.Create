@@ -1,8 +1,8 @@
 .Header-container {
     display: flex;
     flex-flow: row nowrap;
-    height: 52px;
-    margin: 16px;
+    height: 55px;
+    margin: 17px;
     border-radius: 5px;
     border: 1px solid red;
     padding: 1;

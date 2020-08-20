@@ -3,7 +3,7 @@ import "./Body.css";
 import EventCollection from './EventCollection';
 import AllCategories from "./AllCategories.jsx";
 
-const eventsUrl = "http://localhost:3001/api/events";
+const eventsUrl = "http://localhost:3000/api/events";
 
 export default class Body extends Component {
     state = {

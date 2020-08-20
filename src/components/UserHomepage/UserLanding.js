@@ -8,7 +8,7 @@ class UserHome extends Component {
     }
       
       componentDidMount() {
-        fetch("http://localhost:3001/api/tickets")
+        fetch("http://localhost:3000/api/tickets")
         .then(resp => resp.json())
         .then(ticketData => this.setState({
           tickets: ticketData.filter(ticket => ticket.user_id === 1)

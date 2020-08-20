@@ -15,13 +15,13 @@ const Modal = ({ isShowing, hide }, props) => isShowing ? ReactDOM.createPortal(
         <p>
           <div className="title-and-picture">
                 <h2>Title: { "props.event.title" }</h2>
-                <img src={"https://www.alpha.network/sites/default/files/2019-07/alpha-spring-cocktail-party-event-thumbnail-new_0.jpg"} alt=""></img>
+                <img src={"https://study.com/cimages/course-image/big-picture-thinking-in-business_183979_large.jpg"} alt=""></img>
             </div>
             <div className="ModalInfo">
                 <ul>
-                    <li>Price: { 'props.event.price' }</li>
-                    <li>Location: { 'props.event.location' }</li>
-                    <li>Date: {' props.event.date '}</li>
+                    <li><strong>Price: </strong> { 'props.event.price' }</li>
+                    <li><strong>Location: </strong> { 'props.event.location' }</li>
+                    <li><strong>Date: </strong> {' props.event.date '}</li>
                 </ul>
             </div>
             <div className="Buy-Button">
