@@ -13,9 +13,9 @@ const Login = (props) => {
                   onClick={() => props.handleStateChange()}>{!props.active ? "Have a account? Click to log in" : "Click here to register"}</button>
                 </div>
                 <div className="fadeIn first">
-                  <img src={loginImage} id="icon" alt="User Icon" />
+                <img src={loginImage} id="icon" alt="User Icon" />
                 </div>
-
+                
                 <form onSubmit={(e) => props.handleSubmit(e)}>
                   <input type="text" id="login" className="fadeIn second" name="username" placeholder="username"
                   value={props.loginState.username}
