@@ -29,10 +29,24 @@
     margin: 12px;
 } 
 
-.Header-container img {
+/* .Header-container img {
  height: 100px;
  width: 100px;
  position: relative;
  top: -25px;
  ;
+} */
+.logo {
+    height: 60px;
+    width: 70px;
+    position: relative;
+    top: -2px
+
+}
+
+.ecreate {
+    height: 170px;
+    width: 170px;
+    position: relative;
+    top: -60px;
 }
