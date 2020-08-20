@@ -10,7 +10,7 @@ export default class Body extends Component {
       category: null,
       displayEvents: [],
       allEvents: [],
-      currentUser: {}
+      currentUser: {username: 'Princeton', user_id: 1}
     }
 
     componentDidMount(){
@@ -62,23 +62,23 @@ export default class Body extends Component {
       }
     }
 
-    getTicket = (event) => {
-      const options = {
-        'method': 'POST',
-        'headers' : {
+    getTicket = () => {
+      fetch(`http://localhost:3000/api/tickets`, {
+        method: 'POST',
+        headers : {
             'accept': 'application/json',
             'content-type': 'application/json'
         },
-        'body': JSON.stringify({
-            user_id: this.state.currentUser,
-            event_id: event
+        body: JSON.stringify({
+            user_id: 1,
+            event_id: 1
         })
+    })
+      .then(response => response.json())
+      .then(ticket => console.log(ticket))
+      .catch(error => alert(error))
     }
-    fetch("http://localhost:3000/api/tickets", options)
-    .then(response => response.json())
-    .then(ticket => console.log(ticket))
-    .catch(error => alert(error))
-    }
+
 
     renderHomepage = () => this.state.category ? 
     <EventCollection 

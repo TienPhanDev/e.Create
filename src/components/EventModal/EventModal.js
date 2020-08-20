@@ -25,7 +25,7 @@ const EventModal = (props) =>{
                 </ul>
             </div>
             <div className="Buy-Button">
-                <button>
+                <button className='button'>
                     Purchase Tickets?
                 </button>
             </div>

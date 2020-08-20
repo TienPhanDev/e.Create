@@ -6,14 +6,16 @@ import { NavLink } from 'react-router-dom'
 import Logo from './lastlogo.png'
 import ecreate from './ecreate.png'
 
-export default function Header() {
-    
+export default function Header(props) {
+    const loginLogout= () => {
+        return props.loggedIn? "Logout" : "Login"; 
+    }
     return (
         <div className="Header-container">
-            <img className="logo" src={Logo} alt=''></img>
+            <NavLink to="/home" ><img className="logo" src={Logo} alt=''></img></NavLink>
             <img className="ecreate" src={ecreate} alt=''></img>
             <div>
-               <NavLink to="/login" > <NavButton name={"Login"} />   </NavLink> 
+               <NavLink to="/login" onClick={() => props.handleLogin()}> <NavButton name={loginLogout()} /></NavLink> 
                <NavLink to="/event_form"><NavButton name={"Create Event"}/></NavLink>
                 <NavLink to="/events" > <NavButton name={"Browse"}/> </NavLink>   
             </div>

@@ -19,7 +19,7 @@ class UserHome extends Component {
     return (
       <div className="ui vertical segment compact raised segments">
         <div className="ui segment inverted">
-          <h2>Welcome home!</h2>
+          <h2>Welcome home, Princeton!</h2>
         </div>
         <div className='ui vertical segment'>
           <TicketContainer tickets={this.state.tickets}/>

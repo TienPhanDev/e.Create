@@ -12,16 +12,18 @@ const EventCardTwo = (props) => {
     price,
     tickets_remaining,
   } = props.event;
+
   const { isShowing, toggle } = useModal();
   return (
     <div className="example">
       <widget type="ticket" class="--flex-column">
         <div class="top --flex-column">
-          <div class="bandname -bold">Event title</div>
-          <div class="tourname">Tickets left:{tickets_remaining}</div>
+          <div class="bandname -bold">{title}</div>
+          <div class="tourname">Tickets left: {tickets_remaining}</div>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/concert.png"
+            src={`${image_url}`}
             alt=""
+            className='card-image'
           />
           <div class="deetz --flex-row-j!sb">
             <div class="event --flex-column">
@@ -30,13 +32,13 @@ const EventCardTwo = (props) => {
             </div>
             <div class="price --flex-column">
               <div class="label">Price</div>
-              <div class="cost -bold">${price}</div>
+              <div class="cost -bold">${price} per ticket</div>
             </div>
           </div>
         </div>
         <div class="rip"></div>
         <div class="bottom --flex-row-j!sb">
-          <div class="barcode"> </div>
+          <div class="barcode" onClick={() => props.getTicket()}> </div>
           <button class="buy" onClick={toggle}>
             {" "}
             <Modal

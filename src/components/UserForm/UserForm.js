@@ -42,7 +42,7 @@ export default class UserForm extends Component {
         .then(resp => resp.json())
         .then((user) => {
             alert("Successful signin!")
-            console.log(user) //this.LoginUser(response.data)
+            //this.props.handleLogin(user) //this.LoginUser(response.data)
             this.resetUserForm()
         })
         .catch(error => {console.log(error)})
@@ -58,7 +58,8 @@ export default class UserForm extends Component {
         .then(resp => resp.json())
         .then((user) => {
             alert("Successful registration!")
-            console.log(user) //this.LoginUser(response.data)
+            console.log(user)
+            //this.props.handleLogin(user) //this.LoginUser(response.data)
             this.resetUserForm()
         })
         .catch(error => console.log(error))
@@ -93,6 +94,7 @@ export default class UserForm extends Component {
         return (
           <div>
             <Login
+            handleLogin={this.props.handleLogin}
             loginState={this.state}
             handleStateChange={this.handleStateChange} 
             active={this.state.active} 

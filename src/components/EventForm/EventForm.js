@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class EventForm extends Component {
     state = {
           title: '',
-          category: "social",
+          category: 'music',
           description: '',
           location: '',
           image_url: '',
@@ -18,6 +18,12 @@ export default class EventForm extends Component {
         this.setState(newState);
     }
 
+    handleCategory = (e) => {
+      this.setState({
+        category: e.target.value
+      });
+    }
+
     handleSubmit = (e) => {
       e.preventDefault();
       fetch(`http://localhost:3000/api/events/`, {
@@ -30,7 +36,7 @@ export default class EventForm extends Component {
       })
       .then(resp => resp.json())
       .then((response) => {
-        console.log(response) //this.addNewEvent(response.data)
+        console.log(response)
         this.resetForm()
         alert('Event Successfully created!')
       })
@@ -40,7 +46,7 @@ export default class EventForm extends Component {
     resetForm = () => {
       this.setState({
         title: '',
-        category: "social",
+        category: 'music',
         description: '',
         location: '',
         image_url: '',
@@ -74,7 +80,7 @@ export default class EventForm extends Component {
               value={this.state.price} onChange={this.handleInput}/><br></br>
 
               <label style={{ color: 'white' }}> Event Category: <br></br>
-                <select value={this.state.value} onChange={this.handleInput}>
+                <select value={this.state.category} onChange={this.handleCategory}>
                   <option value="music">Music</option>
                   <option value="sports">Sports</option>
                   <option value="educational">Educational</option>
