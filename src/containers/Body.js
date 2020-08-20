@@ -84,13 +84,14 @@ export default class Body extends Component {
     <EventCollection 
     getTicket={this.getTicket}
     displayEvents={this.state.displayEvents}
-    resetDisplay={this.resetDisplay} /> :
+    resetDisplay={this.resetDisplay} 
+    category={this.state.category}/> :
     <AllCategories filterEvents={this.filterEvents}/>
 
     render() {
       return (
         <>
-        {this.renderHomepage()}
+          {this.renderHomepage()}
         </>
     );
   }

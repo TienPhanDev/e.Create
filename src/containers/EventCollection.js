@@ -6,11 +6,11 @@ import EventCardTwo from '../components/EventCard/EventCard2.jsx';
 const EventCollection = (props) => {
     return (
         <>
-        <h1 style={{ color: 'white' }}>Upcoming events</h1>
-        <button onClick={() => props.resetDisplay()}>Click to go back</button>
+        <h1 style={{ color: 'white' }}>Upcoming {`${props.category.toUpperCase()} `} events</h1>
+        <button onClick={() => props.resetDisplay()}>View all categories</button>
         <div className="hello">
             {props.displayEvents.map(event =>  
-            <EventCard
+            <EventCardTwo
             key={event.id} 
             event={event}
             getTicket={props.getTicket}
