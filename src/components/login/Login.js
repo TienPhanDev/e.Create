@@ -1,6 +1,7 @@
 import React from 'react';
 import loginImage from './loginimage.jpg';
 import "./login.css";
+import { Icon } from 'semantic-ui-react'
 
 const Login = (props) => {
       return (
@@ -13,7 +14,8 @@ const Login = (props) => {
                   onClick={() => props.handleStateChange()}>{!props.active ? "Have a account? Click to log in" : "Click here to register"}</button>
                 </div>
                 <div className="fadeIn first">
-                  <img src={loginImage} id="icon" alt="User Icon" />
+             
+                  <img className="login-image" src={loginImage} id="icon" alt="User Icon" />
                 </div>
 
                 <form onSubmit={(e) => props.handleSubmit(e)}>
