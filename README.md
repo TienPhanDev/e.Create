@@ -10,10 +10,10 @@
 
 # DEMO 
 Browsing Events
-![e.Create Demo](e.create.gif)
+![e.Create Demo](e.Create.gif)
 
 User login & create new event
-![e.Createlogin Demo](e.createLogin.gif)
+![e.Createlogin Demo](e.CreateLogin.gif)
 
 ### 🏠 [Homepage](https://github.com/TienPhanDev/e.Create-Front-End)
 Back End repository: https://github.com/TienPhanDev/e.Create-Back-End
@@ -38,7 +38,7 @@ npm run test
 
 ## Author
 
-👤 **Tien Phan**
+👨‍💻 **Tien Phan**
 
 * Website: https://www.medicine2code.com
 * Github: [@TienPhanDev](https://github.com/TienPhanDev)
