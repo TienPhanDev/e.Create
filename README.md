@@ -23,19 +23,13 @@ Back End repository: https://github.com/TienPhanDev/e.Create-Back-End
 ## Install
 
 ```sh
-npm install
+npm install or yarn
 ```
 
 ## Usage
 
 ```sh
-npm run start
-```
-
-## Run tests
-
-```sh
-npm run test
+npm run start or yarn start
 ```
 
 ## Author
