@@ -10,9 +10,11 @@
 
 # DEMO 
 Browsing Events
+<br />
 ![e.Create Demo](e.Create.gif)
 
 User login & create new event
+<br />
 ![e.Createlogin Demo](e.CreateLogin.gif)
 
 ### 🏠 [Homepage](https://github.com/TienPhanDev/e.Create-Front-End)
