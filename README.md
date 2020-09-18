@@ -8,6 +8,13 @@
 
 > A platform for users to explore & buy tickets to a wide array of events while simultaneously allowing a user the ability to create & host an event of their own.
 
+# DEMO 
+Browsing Events
+![e.Create Demo](e.create.gif)
+
+User login & create new event
+![e.Createlogin Demo](e.createLogin.gif)
+
 ### 🏠 [Homepage](https://github.com/TienPhanDev/e.Create-Front-End)
 Back End repository: https://github.com/TienPhanDev/e.Create-Back-End
 
